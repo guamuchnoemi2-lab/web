@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>mi menu</title>
+  <link rel="stylesheet" type="text/css" href="menu.css" />
+  <link rel="stylesheet" type="text/css" href="estilos1.css" />
+  <link rel="stylesheet" type="text/css" href="estilos2.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="quetzal.png" alt="Logo Sabores de mi tierra" />
+      <h1>Sabores de mi <br /> tierra</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html#">inicio</a></li>
+        <li><a class="active" href="menu.html#">Menu</a></li>
+        <li><a href="Acerca.html">Acerca de</a></li>
+        <li><a href="Redes.html">Redes Sociales</a></li>
+        <li><a href="sevicios.html">Servicios</a></li>
+      </ul>
+    </nav>
+    <div class="busqueda">
+      <input type="search" placeholder="Busqueda" />
+    </div>
+  </header>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Buscar productos..." />
+    <button onclick="filterProducts()">Buscar</button>
+  </div>
+
+  <div class="menu-categorias">
+    <div class="categoria-box">
+      <h3 onclick="toggleLista('lista-desayunos')">Desayunos ⬇</h3>
+      <ul id="lista-desayunos" class="sub-lista" style="display: none;">
+        <li><a href="#" onclick="mostrarPlatillo('desayuno1')">Desayuno chapín Q35</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('desayuno2')">Desayuno Delux Q45</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('desayuno3')">Avena y fruta Q25</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('desayuno4')">Panqueques Q25</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('desayuno5')">Tamales Q20</a></li>
+      </ul>
+    </div>
+
+    <div class="categoria-box">
+      <h3 onclick="toggleLista('lista-almuerzos')">Almuerzos ⬇</h3>
+      <ul id="lista-almuerzos" class="sub-lista" style="display: none;">
+        <li><a href="#" onclick="mostrarPlatillo('almuerzo1')">Sopa de Tortilla Q35</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('almuerzo2')">Pepian Q60</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('almuerzo3')">Kac'ik Q80</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('almuerzo4')">Pinol Q40</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('almuerzo5')">Hilachas Q45</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('almuerzo6')">Shukos Q20</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('almuerzo7')">Chorizada Q20</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('almuerzo8')">Jocon Q50</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('almuerzo9')">Subanik Q60</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('almuerzo10')">Quichon Q50</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('almuerzo11')">Boxbol Q30</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('almuerzo12')">Patin Q40</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('almuerzo13')">Tobic Q40</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('almuerzo14')">Cojin Bataneco Q50</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('almuerzo15')">Tayuyos Q15</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('almuerzo16')">Empanadas Q12</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('almuerzo17')">Chilaquilas de güisquil Q15</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('almuerzo18')">Churrascos Q25</a></li>
+      </ul>
+    </div>
+
+    <div class="categoria-box">
+      <h3 onclick="toggleLista('lista-cenas')">Cenas ⬇</h3>
+      <ul id="lista-cenas" class="sub-lista" style="display: none;">
+        <li><a href="#" onclick="mostrarPlatillo('cena1')">Cena Tradicional Q40</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('cena2')">Churrasco Q25</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('cena3')">Tamales Q20</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('cena4')">Paches Q25</a></li>
+      </ul>
+    </div>
+
+    <div class="categoria-box">
+      <h3 onclick="toggleLista('lista-bebidas')">Bebidas ⬇</h3>
+      <ul id="lista-bebidas" class="sub-lista" style="display: none;">
+        <li><a href="#" onclick="mostrarPlatillo('bebida1')">Boj Q20</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('bebida2')">Chinchivir Q15</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('bebida3')">Semilla de ayote Q15</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('bebida4')">Tamarindo con chan Q12</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('bebida5')">Tiste Q12</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('bebida6')">Cremita Q12</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('bebida7')">Fresco de suchiles Q12</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('bebida8')">Horchata Q12</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('bebida9')">Jamaica Q12</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('bebida10')">Limonada Q12</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('bebida11')">Té frio Q12</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('bebida12')">Naranjada con soda Q15</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('bebida13')">Limonada con soda Q15</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('bebida14')">Coca-cola Q15</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('bebida15')">Sprite Q15</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('bebida16')">Agua pura Q10</a></li>
+      </ul>
+    </div>
+
+    <div class="categoria-box">
+      <h3 onclick="toggleLista('lista-cocteles')">Cocteles ⬇</h3>
+      <ul id="lista-cocteles" class="sub-lista" style="display: none;">
+        <li><a href="#" onclick="mostrarPlatillo('coctel1')">Bomba Q35</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('coctel2')">Granizada Q30</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('coctel3')">Sangria Q35</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('coctel4')">Palomas Q35</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('coctel5')">Mojito Q30</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('coctel6')">Margarita Q35</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('coctel7')">Cerveza Gallo Q15 Q22</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('coctel8')">Cerveza cabro Q13</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('coctel9')">Montecarlo Q18</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('coctel10')">Dorada Draft Q15</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('coctel11')">Cerveza Corona Q12 Q20</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('coctel12')">Tequila Jose Cuervo Q55 Q300</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('coctel13')">Ron Zacapa Q75 Q500</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('coctel14')">Whiskey Johnnie Walker Q65 Q670</a></li>
+      </ul>
+    </div>
+
+    <div class="categoria-box">
+      <h3 onclick="toggleLista('lista-postres')">Postres ⬇</h3>
+      <ul id="lista-postres" class="sub-lista" style="display: none;">
+        <li><a href="#" onclick="mostrarPlatillo('postre1')">Molletes Q15</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('postre2')">Garbanzos con miel Q15</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('postre3')">Buñuelos Q8</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('postre4')">Torrejas Q15</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('postre5')">Jocotes en miel Q15</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('postre6')">Mole Q12</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('postre7')">Platanos fritos Q14</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('postre8')">Rellenitos Q8</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('postre9')">Ayote en miel Q15</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('postre10')">Empanadas dulces Q10</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('postre11')">Combo Bocado de reina Q20</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('postre12')">Combo Quesadilla Q20</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('postre13')">Manjar Q12</a></li>
+        <li><a href="#" onclick="mostrarPlatillo('postre14')">Flan Q12</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="detalle-platillo" class="platillo-box" style="display: none;">
+    <button class="cerrar-btn" onclick="cerrarPlatillo()">✖</button>
+    <img id="imagen-platillo" src="" alt="" />
+    <p id="descripcion-platillo"></p>
+  </div>
+
+  <script>
+    const platillos = {
+      desayuno1: {
+        imagen: "https://tse2.mm.bing.net/th/id/OIP.RjZVY1c-F8d2UG3NJz6PwQAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+        descripcion: "Desayuno tradicional guatemalteco: Platanos fritos, frijoles al gusto y huevos al gusto",
+      },
+      desayuno2: {
+        imagen: "https://www.guatemala.com/fotos/2019/10/Cafe-La-Quinta-Guatemala-885x500.jpg",
+        descripcion: "Desayuno Delux excelente platillo, abundante y completo. Plátanos fritos, frijoles al gusto, huevos al gusto y chorizos.",
+      },
+      desayuno3: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPyNH1toAb3brZ0amGelaNbfOk-M-mouUE1g&s",
+        descripcion: " Este platillo aporta nutrientes y energía para comenzar el día elaborado con ingredientes de buena calidad: avena. Yogur natural y/o leche. Frutas al gusto (banano, fresas, manzana). Semillas de marañón o almendras picadas.",
+      },
+      desayuno4: {
+        imagen: "https://www.guatemala.com/fotos/2019/01/Todo-lo-que-puedas-comer-de-panqueques-885x500.jpg",
+        descripcion: "Panqueques servidos con aderezos y frutas al gusto (banano, fresas, manzanas.",
+      },
+      desayuno5: {
+        imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Tamal_guatemalteco.JPG/1024px-Tamal_guatemalteco.JPG",
+        descripcion: "Tamales tradicionales elaboros a base de masa de maíz rellena de carnes y salsas.",
+      },
+      almuerzo1: {
+        imagen: "https://aprende.guatemala.com/wp-content/uploads/2017/04/Receta-para-hacer-sopa-de-tortilla-guatemalteca.jpg",
+        descripcion: "Platillo con orígenes prehispánicos se caracteriza por sus ingredientes que son la base alimenticia en la gastronomía guatemalteca las tortillas, tomates, cebollas, crema, verduras y cilantro.",
+      },
+      almuerzo2: {
+        imagen: "https://www.spanishacademyantiguena.com/assets/design/blogs/level5/pepian-guatemala-recipe-01.jpg",
+        descripcion: "El pepián es un platillo tradicional guatemalteco de origen maya kaqchiquel propio del departamento de Chimaltenango, su origen es prehispánico y se elabora a base de un guiso espeso de verduras y carnes acompñado de tamalitos.",
+      },
+      almuerzo3: {
+        imagen: "https://aprende.guatemala.com/wp-content/uploads/2016/10/Receta-de-Kaqik-guatemalteco.jpg",
+        descripcion: "Kac'ik Este platillo es una sopa de chompipe elaborada con tomates, chiles, verduras y acompañada con arroz. típica de la gastronomía guatemalteca es una comida de origen prehispánico",
+      },
+      almuerzo4: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUj-98H6PH0KLcoyvPjyaYU_G8r7bmAUgoSA&s",
+        descripcion: "El pinol es un alimento tradicional y ceremonial en San Juan Sacatepéquez este platillo tiene raíces ancestrales en la cultura indígena. esta elaborado con maíz tostado y molido acompañada con carne.",
+      },
+      almuerzo5: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq4wuvQ7a55Y2xFa75grAM-zrYFG9S9oB9lA&s",
+        descripcion: "Las hilachas son un platillo originario de la cocina guatemalteca. Tiene sus orígenes en Salamá, baja Verapaz consiste en carne de res desmenuzada servida con salsa de tomate, tamalitos y verduras.",
+      },
+      almuerzo6: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXjEdGpDRC0RxT22L2bf0zSgL_y1FN7Fp7pA&s",
+        descripcion: "Este platillo guatemalteco popular en las áreas urbanas de Guatemala, su nombre significa “sucio “en español chapín. Conocida por la rapidez de su preparación y por sus diversos ingredientes como el repollo la salsa kétchup, mayonesa mostaza aguacate y carnes.",
+      },
+      almuerzo7: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8lCN7r440MgN2WL7nbeXxGD2jZYeMITQ7Yg&s",
+        descripcion: "Platillo popular por que son tortillas combinadas con carne asada, chorizo, longaniza.Su esencia y popularidad se basa en la versatilidad y la posibilidad de disfrutar de la carne y sus diversos acompañamientos según el gusto de cada persona como el guacamol frijoles o arroz.",
+      },
+      almuerzo8: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIHmz13T27PwGMzItINU06E-sWQvQo8rDRHg&s",
+        descripcion: "El jocón es un platillo tradicional de la gastronomía guatemalteca, originaria del departamento de Huehuetenango. Se caracteriza por su color verde debido a sus ingredientes principales.",
+      },
+      almuerzo9: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt0f6fcgTxdcwfSiY2LoBYVtLM1v2iS6sR6A&s",
+        descripcion: "Es un platillo guatemalteco originario de San Martin Jilotepeque Chimaltenango, considerado un platillo tradicional, caracterizado por su recado picante cocinado dentro de hojas de maxan.",
+      },
+      almuerzo10: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSXmseukB4125eBG12sjEy2fT6rOvxapkuSQO3esYkADpbw1s28d2ztqdk5WDgHdEVMzU&usqp=CAU",
+        descripcion: "Es un platillo muy tradicional de Guatemala, de las regiones de Sacatepequez y Quetzaltenango. Caracterizada por su inigualable sabor de la salsa, cuyos ingredientes principales son los tomates ajo y chiles acompañada con carnes y arroz.",
+      },
+      almuerzo11: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvteiLRwoYO2TdP-8YPMsF9e5YyDmdjUwi6Q&s",
+        descripcion: "Los boxboles se elaboran en el área de Baja Verapaz y Quiche, específicamente en Nebaj comida típica de su región es uno de los platillos que se pueden preparar al inicio de las cosechas ya que se necesitan hojas de ayote o güisquil y se acompaña con salsa.",
+      },
+      almuerzo12: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkwLnz6ltNes4jkD34IeoWlc1FDaidinduhA&s",
+        descripcion: "Patin Es un platillo tradicional del municipio de Santiago Atitlan, en el departamento de Solola. Considerada una comida ancestral y típica de la región. EL Nombre patin hace referencia a la textura del platillo que esta echa a base de tomate, pescado seco y envuelta en hojas de maxan.",
+      },
+      almuerzo13: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX6R9kWnROiSZ7rqRzQnWrTMxqX6igc95f1Q&s",
+        descripcion: "TTobic Es un caldo,también conocido como “caldo de Fiesta” Es un platillo tradicional del departamento de Totonicapan. Su nombre proviene del idioma Kiche y significa “hecho por todos juntos” se elabora a base de costilla de res vegetales y esencias.",
+      },
+      almuerzo14: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmQ5CgFrVIYpoXMsQqLMUeL7k4ihtiupz5PQ&s",
+        descripcion: "Este platillo proviene del municipio de Sebastian, Retalhuleu, en Guatemala. Esta comida es especial ya que se elabora con ingredientes y técnicas especificas de ese lugar elaborada con carne de res, verduras y acompañado con tamamlitos.",
+      },
+      almuerzo15: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7FYy56sPCaL40qiE5auucQz51E6YFJ58h3Q&",
+        descripcion: "Tayuyos Esta delicia es una comida tradicional guatemalteca originaria del departamento de San Marcos. Es un tamalito hecho a base de maíz y relleno de haba molida o frijol.",
+      },
+      almuerzo16: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzqVkJzrzWgBfVwubzP52T3lZDVncSAkvJAA&s",
+        descripcion: "Empanadas Comida tradicional de Guatemala. Es una masa crujiente con un exquisito relleno de pollo.",
+      },
+      almuerzo17: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7GKCcS-jDzxLRWlWOqM47yhXcbeRmhbRtuQ&s",
+        descripcion: "Conocidos como chilacas de güisquil en un plato tradicional que se origino en la cocina Guatemalteca. La receta de chilaquilas es una muestra de la riqueza culinaria de Guatemala donde se fusionan ingredientes locales con técnicas culinarias ancestrales echa a base de güisquil envueltas en huevo y acompañada con salsa.",
+      },
+      almuerzo18: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKf_xt4rCpIJ8d1nI3gzneq_cQLHK-gaFlbA&s",
+        descripcion: "Carne a la parrilla, acompañada de frijoles volteados, papas fritas, chirmol, guacamol, arroz y tortillas.",
+      },
+      cena1: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0BisBidGrTsCwJ3UzLiz8YKqvcTQ0Qr6Ly5TZ12uADdlToHMm1-Vi7DQTqeem6S4kk3Y&usqp=CAU",
+        descripcion: "Cena tradicional: platanos fritos, frijoles al gusto, huevos al gusto y chorizos.",
+      },
+      cena2: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLp6y7ZEIDdw0uv0pjC7Ik4bYtzlR96ZngQBMhtxxcTejw0PbYji9HK5CbbP8hDu1ZPbg&usqp=CAU",
+        descripcion: "Carne a la parrilla, acompañada de frijoles volteados, papas fritas, chirmol, guacamol, arroz y tortillas o pan con mantequilla.",
+      },
+      cena3: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPjUxxAXYuBR75rNRP_vOZL-VxuxXf9uK7FQ&s",
+        descripcion: "Tamales tradicionales elaboros a base de masa de maíz rellena de carnes y salsas.",
+      },
+      cena4: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7bFVKuOR4nUSu0D-reD6vIeXUA3AbXuP-HyxysGjHQQuF1kFxHuTbpHz7IwD5biqHIP4&usqp=CAU",
+        descripcion: "Paches, tamales de papa, un platillo típico de Guatemala, tienen su origen en Quetzaltenango, donde la abundancia de papa llevó a sustituir el maíz y por ello en la preparación de los paches",
+      },
+      bebida1: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7Mtkr3eIOFtabe3HX5AWCBF-y5iO4UZE7bw&s",
+        descripcion: "Boj, es una bebida popular en el area de alta verapaz por su significado ancestral espiritual esta echa a base de maiz y jugo de caña de azucar.",
+      },
+      bebida2: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-gJFCvSfBCCMn5wifyD97wYmhc_4QU8QN6Q&s",
+        descripcion: "Chinchivir tradicional es un refresco a base de limones,agua, hojas de menta y gengibre y tiene un sabor inigualable ya que no es dulce si no un poco amargo.",
+      },
+      bebida3: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQKCPwvv1ds1gDmJk72-CRv7P2Zr6cM3Gd271FQ65beJ5yQZDsoQ8KqsfWoOffycpBUno&usqp=CAU",
+        descripcion: "El fresco de pepita de ayote es una bebida bastante conocida en Guatemala sobre todo en los departamentos de Zacapa y Chiquimula.Sus ingredientes son las semillas e ayote,agua y azucar.",
+      },
+      bebida4: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0ZK44_0lkoQani63QVzIY5shho-lcLf73qw&s",
+        descripcion: "El fresco de pepita de ayote es una bebida bastante conocida en Guatemala sobre todo en los departamentos de Zacapa y Chiquimula.Sus ingredientes son las semillas e ayote,agua y azucar.",
+        },
+      bebida5: {
+        imagen: "https://i.pinimg.com/736x/8b/36/7b/8b367bd9aca8d87622f9228c22b50c71.jpg",
+        descripcion: "El tiste es una bebida tradicional de Guatemala, especialmente popular en la región oriental del país, como en Quezaltepeque, Chiquimula. Se elabora a partir de una mezcla de ingredientes tostados y molidos, como cacao, maíz, canela, achiote y azúcar, que se disuelven en agua o leche.",
+        },
+      bebida6: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5VSe1GxBy4Z39yxI8xdnp7nXqOFRomrCWpg&s",
+        descripcion: "Las cremitas son unas bebidas tradicionales que están hechas a base de leche y vainilla. Estas suelen tomarse frías.",
+        },
+      bebida7: {
+        imagen: "https://culturaguate.com/wp-content/uploads/2023/07/LB_7705-scaled.jpg",
+        descripcion: "El fresco de súchiles es una bebida ancestral que se elabora con frutas fermentadas, como la cáscara de piña, y otros ingredientes como maíz tostado, cebada, panela, especies y agua.",
+        },
+      bebida8: {
+        imagen: "https://www.verybestbaking.com/sites/g/files/jgfbjl326/files/srh_recipes/4992925f9ec029618f1e5b7d8478371c.jpg",
+        descripcion: "La horchata es una bebida tradicional que se toma en muchos países.  Varía en las semillas, como almendra, pepitoria, manía, nuez o pecanas.  Se endulza con azúcar",
+        },
+      bebida9: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB66nDhpC43fArqJqanu3hHPMEHnN3Nqv03g&s",
+        descripcion: "Es una bebida tradicional con un significado histórico. Se ha convertido en un ícono de la gastronomía guatemalteca.",
+        },
+      bebida10: {
+        imagen: "https://cdn0.uncomo.com/es/posts/7/6/6/como_hacer_limonada_7667_600_square.jpg",
+        descripcion: "La limonada especial de Guatemala es una bebida refrescante con panela, símbolo de hospitalidad y tradición, perfecta para días de calor.",
+        },
+      bebida11: {
+        imagen: "https://image.jimcdn.com/app/cms/image/transf/dimension=792x10000:format=jpg/path/sf6e56563824ffad7/image/i141129045a6b8b44/version/1643134296/image.jpg",
+        descripcion: "El té frío consiste en una forma helada de té, servida en un vaso con hielo.",
+        },
+      bebida12: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwrbs5VivvQSBTi_TcDCaOLtvjZS-_h6gdVOa0edcDVYR7HflIKG-u1qQI839kSS0olS8&usqp=CAU",
+        descripcion: "Naranjada natural con soda, servida en un vaso con hielo.",
+        },
+      bebida13: {
+        imagen: "https://www.debate.com.mx/img/2022/08/26/limonada-mineral.jpeg?__scale=w:1200,h:1200,t:2",
+        descripcion: "Limonada natural con soda, servia en un vaso de hielo.",
+        },
+      bebida14: {
+        imagen: "https://lh3.googleusercontent.com/proxy/0Rl6brv3r45YPmKsw7zuncvhOVMd4LBAMs0TXIniJZXaZwMFIYxIsKp_WyjAaGg5XkCrS80mDJAQ0z0OZcKNPeVWGQbOpxIVgIW50ZsfrSYqOD0NT5QMTAyUVrbRyH6BJQ",
+        descripcion: "Cocacola de 355ml, servida en un vaso con hielo.",
+        },
+      bebida15: {
+        imagen: "https://i.ytimg.com/vi/3Pm_I_ulAV8/maxresdefault.jpg",
+        descripcion: "Sprite de 355ml, servida en vaso con hielo.",
+        },
+      bebida16: {
+        imagen: "https://d2evkimvhatqav.cloudfront.net/images/bottled-water-poured-glass-37392749.jpg?v=1594930560",
+        descripcion: "Agua pura de 600ml.",
+      },
+      coctel1: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQukAlO5_7Ptd9aKv-8sJ0UOELblDn-qWGBoA&s",
+        descripcion: "Deliciosa bebida mixta a base de tequila, Quetzalteca de preferencia, jarabe de distintos sabores.",
+      },
+      coctel2: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjt5ImM4IBI6U4mKmCm0TEP2AlzuWaL09Lkw&s",
+        descripcion: "Granizada con Quetzalteca es una bebida refrescante que combina el sabor de la gaseosa Quetzalteca con hielo raspado, creando una textura similar a un granizado.",
+      },
+      coctel3: {
+        imagen: "https://okdiario.com/img/2023/06/26/sangria-1.jpg",
+        descripcion: "Sangria, consta de vino tinto, jugo de naranja, agua con gas y frutas.",
+      },
+      coctel4: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfiNpa43T-dDbJwhXitgYg1QCGdQ_4YbTz2A&s",
+        descripcion: "La paloma es un cóctel a base de tequila. Esta bebida se prepara más comúnmente mezclando tequila, jugo de toronja y un agua mineral.",
+      },
+      coctel5: {
+        imagen: "https://png.pngtree.com/png-clipart/20240716/original/pngtree-mojito-cocktail-with-different-tastes-lime-strawberry-orange-mint-png-image_15567374.png",
+        descripcion: "El mojito es un cóctel compuesto de ron, limón, azúcar menta, agua con gas. Te ofrecemos diversos sabores (fresa, menta, limon, sandia).",
+      },
+      coctel6: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgIMZsXyejD_87BTmttHyz41F3z3zVJdJLNg&s",
+        descripcion: "Margarita es un cóctel compuesto por tequila y jugo de limón, con direfentes zumos de frutas.. Pide tu favorita.",
+      },
+      coctel7: {
+        imagen: "https://garibaldi.misganancias.net/assets/uploads/c12c374b2754aea98ecdf907b86e87c8.png",
+        descripcion: "Cerveza Gallo 12onz Q15, 24onz Q22, preparada Q25, cubetazo Q110",
+      },
+      coctel8: {
+        imagen: "https://i.ytimg.com/vi/NxeUK17fR_4/maxresdefault.jpg",
+        descripcion: "Cerveza cabro 350ml Q13, cubetazo Q75.",
+      },
+      coctel9: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL3e5ZLpXTDoIKQhCTN2MoqWz9_jeQUx_8D7mIV1ml-1ytcf8Nojr-eMFGaHvEjydU4WQ&usqp=CAU",
+        descripcion: "Cerveza Montecarlo 355ml Q18.",
+      },
+      coctel10: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl0jbMD7f-H0ymrIg9pS5cyntTK6qSBISIxq0Kb1G2dXBlDRcYE6kwnOVn4lr51VtDngc&usqp=CAU",
+        descripcion: "Dorada draft 355ml Q15.",
+      },
+      coctel11: {
+        imagen: "https://www.guiadelacerveza.com/wp-content/uploads/2023/11/Historia-y-Origen-Cerveza-Corona.jpg",
+        descripcion: "Cerveza corona 210ML Q12, 355ml Q20, Preparada Q27, cubetazo Q100",
+      },
+      coctel12: {
+        imagen: "https://lacaretalicores.com/cdn/shop/files/DSC0754_1_.jpgjose2.jpg?v=1695423106&width=1000",
+        descripcion: "Tequila Jose Cuervo, tequilazo Q60, botella Q300.",
+      },
+      coctel13: {
+        imagen: "https://img.postershop.me/cdn-cgi/image/width=1024,format=webp/https://img.postershop.me/9196/fcd17e16-d37c-4b74-9d3d-335402fa3f34_image.jpg",
+        descripcion: "Ron Zacapa, a las rocas Q80, botella Q500",
+      },
+      coctel14: {
+        imagen: "https://images.ctfassets.net/waruwpig3jxu/rYk8WxpJ1ellZvibRckWT/0e8df23f16b39c6d986faf6f68af8fee/black-750ml_producthero_lifestyle-01_desktop.webp?&w=2560&q=80",
+        descripcion: "Whiskey Johnnie Walker, whiscazo Q65, botella Q670.",
+      },
+      postre1: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSD9W0kO2OmAb12RXR6j0XDmO3bXkzPAE8KjYnFL9t_lUxE1_q0miyAA4ZrUiB8p66dck&usqp=CAU",
+        descripcion: "Es un platillo tradicional de la cocina Guatemalteca Son panes dulces rellenos de manjar envueltos en una mezcla de huevo acompañados con miel.",
+      },
+      postre2: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUqXaN292sSqte41lgQ6u-IJzVROCSzsqX5w&s",
+        descripcion: "Garbanzos con miel.Son un postre típico de Guatemala que resalta durante la Cuaresma y la semana santa ,con un sabor profundo que refleja la influencia de la gastronomía española fusionada con ingredientes locales esta echa a base de garbanzos acompañada de crema de legumbres hervido.",
+      },
+      postre3: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvT0r7z3M21JriN9JhOp5e58_RWpUdWcYOxQ&s",
+        descripcion: "Buñuelos crujientes originarios de la antigua Guatemala.Son un dulce frito a base de harina, huevo, leche y azucar.",
+      },
+      postre4: {
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThXUbbE7GjtBzBpOyDgli9_RhzhD8LuIRpfmiMWsdz8gcu3XEVQ2PIKFTjVZTaTO-iEcg&usqp=CAU",
+        descripcion: "El origen de las torrejas se remontar en la época colonial cuando los españoles introdujeron diversas recetas a mesoamerica. Es un pan remojado en vino o leche , frito y espolvoreado con azúcar y canela.",
+      },
+      postre5: {
+        imagen: "https://growingupbilingual.com/wp-content/uploads/2021/10/shutterstock_1566837220-2.jpg",
+        descripcion: "Los jocotes en dulce son de esos postres que no debes dejar de comer. Es una tradición guatemalteca.",
+      },
+      postre6: {
+        imagen: "https://www.recetasnestlecam.com/sites/default/files/styles/recipe_detail_desktop_new/public/srh_recipes/04a56f26aca84d3bdb56b3160ed05f4e.jpg?itok=0U_X-kwm",
+        descripcion: "El mole es un platillo tradicional de Guatemala, que combina la dulzura de los plátanos maduros fritos con un mole hecho a base de una mezcla de especias y chocolate.",
+      },
+      postre7: {
+        imagen: "https://media-cdn.tripadvisor.com/media/photo-s/11/53/47/32/platanos-fritos-con-un.jpg",
+        descripcion: "Platanos fritos: son un plato popular y versátil que se disfruta tanto como guarnición como postre. Se preparan típicamente con plátanos maduros, que se fríen hasta que estén dorados y caramelizados, se sirven con crema y azúcar.",
+      },
+      postre8: {
+        imagen: "https://chefchapin.com/wp-content/uploads/2019/01/rellenitos-de-platano.jpg",
+        descripcion: "Rellenitos: Se trata de un postre que combina perfectamente el sabor del plátano y el frijol. Su sabor es agridulce ya que es envuelto en azúcar y relleno de un importante elemento de la gastronomía local como lo es el frijol.",
+      },
+      postre9: {
+        imagen: "https://eldiariony.com/wp-content/uploads/sites/2/2023/01/calabaza-en-dulce-shutterstock_1835013097.jpg?w=2600",
+        descripcion: "El ayote en dulce es un postre tradicional de Guatemala. Principalmente, el ayote es originario de Mesoamérica, es una planta rastrera o trepadora. También se le conoce con el nombre de calabaza en nuestro país.",
+      },
+      postre10: {
+        imagen: "https://www.lanacion.com.ar/resizer/v2/2R44YDWGWJFUZFRYCXSZXIVAEQ.jpg?auth=08b71efbc5668b2b83e32d38719606018bd7b48c4b8f7822821d5b47f8dbe830&width=420&height=280&quality=70&smart=true",
+        descripcion: "Empanadas Comida tradicional de Guatemala. Es una masa crujiente con un exquisito relleno de manjar o jalea",
+      },
+      postre11: {
+        imagen: "https://growingupbilingual.com/wp-content/uploads/2012/03/shutterstock_1781050913-scaled.jpg",
+        descripcion: "Combo Bocado de Reina: Este combo de incluye, café con crema y nuestro deilicioso bocado de reina.",
+      },
+      postre12: {
+        imagen: "https://www.sicultura.gob.gt/wp-content/uploads/2023/09/Quesadilla-885x500-1.jpg",
+        descripcion: "Combo Quesadilla: Este combo te incluye cafe con crema y nuestra tradicional Quesadilla.",
+      },
+      postre13: {
+        imagen: "https://i.ytimg.com/vi/4vBpVwyaWT0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBhg9Ek8MaAyvKXemk8-ix_RcncmA",
+        descripcion: "El manjar de leche es uno de los postres tradicionales de Guatemala. Este postre está hecho a base de Leche Entera, agua, canela y fécula de maíz y que puede ser consumido caliente o frío.",
+      },
+      postre14: {
+        imagen: "https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480_1_5x/img/recipe/ras/Assets/32121D5E-D3DF-4FD9-BE6E-7EB53562A1DE/Derivates/02DCA6F3-23D3-4F25-92B2-EAEF2A6606F3.jpg",
+        descripcion: "Flan un postre de natillas horneadas con una capa de caramelo encima.",
+      },
+
+    };
+
+    function mostrarPlatillo(nombre) {
+      const platillo = platillos[nombre];
+      if (!platillo) return alert("Platillo no encontrado.");
+      document.getElementById("imagen-platillo").src = platillo.imagen;
+      document.getElementById("imagen-platillo").alt = nombre;
+      document.getElementById("descripcion-platillo").textContent = platillo.descripcion;
+      document.getElementById("detalle-platillo").style.display = "block";
+    }
+
+    function toggleLista(id) {
+      const lista = document.getElementById(id);
+      lista.style.display = lista.style.display === "none" ? "block" : "none";
+    }
+
+    function cerrarPlatillo() {
+      document.getElementById("detalle-platillo").style.display = "none";
+    }
+  </script>
+</body>
+</html>

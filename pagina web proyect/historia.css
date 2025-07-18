@@ -1,0 +1,15 @@
+.box {
+   
+    background-color: transparent;
+    color: black;
+    width: 80%;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    min-height: 200px;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    margin: 0 auto;
+    margin-top: 3%;
+}
